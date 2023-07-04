@@ -1,4 +1,5 @@
 const express=require('express')
+const PORT=8001
 const ConnectDB=require('./Database/Db')
 const bodyParser=require('body-parser')
 const app=express()
@@ -16,7 +17,7 @@ app.use(blogrouter)
 app.get("/",(req,res)=>{
     res.send('Hello World')
 })
-app.listen(8001,()=>{
+app.listen(PORT,()=>{
     console.log("Its working")
     ConnectDB()
 })
